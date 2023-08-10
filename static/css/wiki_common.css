@@ -1,0 +1,412 @@
+/*** TOPLEVEL ***/
+html {
+  font-family: "Adobe Caslon Pro", "Palatino Linotype", "Palatino", serif;
+  font-size: 12pt;
+}
+
+body {
+  color: white;
+  background-color: #007;
+  position: relative;
+}
+
+/*** CONTAINER ***/
+div.container {
+  position: relative;
+  color: black;
+  box-shadow: 0rem 1rem 1rem black;
+}
+
+/*** HEADER ***/
+
+div.container > header h1 span.homesuffix {
+  font-size: 0.7em;
+  color: gray;
+}
+div.container > header section.title nav {
+  background-color: black;
+  padding: 0.5em 2em;
+  color: white;
+}
+div.container > header section.title nav p {
+  display: inline-block;
+  margin: 0px;
+}
+div.container > header section.title nav a {
+  color: #aaf;
+}
+/*** HEADER ***/
+div.container > header {
+  font-family: sans-serif;
+  background-color: black;
+  position: relative;
+  color: white;
+}
+body.hide-header header {
+  display: none;
+}
+div.container > header a {
+  color: inherit;
+  text-decoration: none;
+}
+div.container > header section > div {
+  display: flex;
+  flex-direction: row;
+}
+div.container > header .spread {
+  justify-content: space-around;
+}
+div.container > header .spreadwide {
+  justify-content: space-between;
+}
+div.container > header .info {
+  padding: 0.5em 2em;
+  background-color: #222;
+}
+div.container > header section .spacer {
+  flex-grow: 1;
+}
+div.container > header section.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* spread so that it is hard to press the wrong one */
+}
+div.container > header section .block {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  overflow: hidden;
+  font-size: 1.5rem;
+  text-align: center;
+  vertical-align: top;
+  line-height: 2em;
+  height: 2em;
+  width: 2em;
+}
+div.container > header section.title {
+  display: block;
+  xpadding: 0.5rem;
+  background-color: orange;
+}
+div.container > header section.title {
+  padding-bottom: 0.9rem;
+}
+div.container > header section.options {
+  background: #700;
+  display: none;
+  padding: 0.5rem;
+}
+div.container > header section.title h1.page-title {
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+div.container > header section.title h2.page-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 0.1rem;
+}
+
+/** BREADCRUMBS **/
+div.container > header span.breadcrumbs a {
+  margin-right: 0.5em;
+}
+
+/** TAGS **/
+div.container > header div.tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div.container > header div.tags ul li a {
+  display: inline-block;
+  padding: 0.3em;
+}
+div.container > header div.tags ul li {
+  display: inline-block;
+  border: 1px solid black;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  margin: 0.3em;
+}
+div.container > header span.hashtags span.hashtag {
+  font-style: italic;
+}
+div.container > header span.hashtags span.hashtag a {
+  color: inherit;
+  text-decoration: none;
+}
+div.container > header span.hashtags span.hashtag a:hover {
+  color: #77f;
+  text-decoration: underline;
+}
+div.container > header span.hashtags span.hashtag::before {
+  content: "#";
+  font-style: italic;
+  color: #ff7;
+}
+
+/** TODO: Media Print **/
+/* Hide options and stuff */
+/* Show full date/time of modification */
+/* Show breadcrumbs on same line as mtime */
+/* Header has 1px solid bottom border */
+/* Hide navbar */
+/* Show only title */
+
+/** NAVBAR **/
+div.container > header nav ul {
+  margin: 0px;
+  margin-top: 0.5rem;
+  padding: 0px;
+}
+div.container > header nav ul li {
+  display: inline-block; margin-right: 1em;
+}
+div.container > header nav a {
+  text-decoration: none;
+}
+div.container > header nav ul li {
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 300px;
+  list-style-type: none;
+  background-color: #007;
+  color: #ddd;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  font-size: 1.1em;
+  padding: 0.4em;
+}
+div.container > header nav a, 
+div.container > header nav a:visited {
+  color: #007;
+  
+}
+div.container > header nav a:hover {
+  color: #00f;
+}
+
+/*** CONTENT ***/
+section.main {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+
+section.main img {
+  max-width: 512px;
+  max-height: 512px;
+}
+
+/* 1.1 numbering */
+ol { counter-reset: item }
+ol ol > li{ display: block }
+ol ol > li:before { content: counters(item, ".") ". "; }
+ol > li { counter-increment: item; }
+ol ol, ol ul, ul ol, ul ul { padding-left: 1em; }
+
+/* quick keys */
+span.quick-key {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+body.mobile span.quick-key {
+  display: none;
+}
+
+/*** DIALOGS ***/
+dialog {
+  font-family: sans-serif;
+  padding: 0;
+  border-radius: 0.5em;
+  text-align: center;
+  background-color: white;
+  position: relative;
+}
+dialog {
+  box-shadow: 0.5rem 0.5rem 0.8rem black;
+}
+dialog {
+  overflow-y: auto;
+}
+div.overlay header section.topbar,
+dialog header section.topbar {
+  font-size: 2rem;
+  display: flex;
+}
+dialog.left-justify {
+  text-align: left;
+}
+dialog header section.topbar span.pagename-before {
+  font-size: 1.3rem;
+  color: #aaa;
+}
+dialog header section.topbar {
+  color: white;
+  background-color: #007;
+}
+div.overlay header section.topbar span.spacer,
+dialog header section.topbar span.spacer {
+  flex-grow: 1;
+}
+div.overlay header section.topbar span.spacer2,
+dialog header section.topbar span.spacer2 {
+  flex-grow: 2;
+}
+dialog div.close-button {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+}
+dialog .bigtext {
+  font-size: 1.5em;
+}
+dialog.goto input {
+  font-size: 2em;
+  background-color: #ffa;
+}
+dialog.versions-box {
+}
+dialog.versions-box ul {
+  list-style-type: none;
+}
+dialog.versions-box table {
+  width: 100%;
+}
+dialog.versions-box td {
+  min-width: 30%;
+}
+dialog.uploadinfo {
+  font-size: 1.2em;
+  background-color: yellow;
+  color: black;
+}
+dialog.uploadinfo[status="success"] {
+  background-color: #afa;
+}
+dialog.uploadinfo[status="mixed"] {
+  background-color: #ffa;
+}
+dialog.uploadinfo[status="fail"] {
+  background-color: #700;
+  color: white;
+}
+dialog.uploadinfo img {
+  max-width: 6rem;
+  height: 2rem;
+}
+dialog header {
+  xheight: 1.5em;
+}
+dialog header .title {
+  display: block;
+  margin: 0px;
+  margin-top
+  flex-grow: 1;
+}
+dialog .flag {
+  background-color: #aac;
+  padding: 0.1em;
+  border: 1px solid black;
+  margin: 0.2em;
+  box-shadow: 0.3em 0.3em 0.3em black;
+}
+dialog .flag[state="on"] {
+  background-color: #a7a;
+  box-shadow: 0.1em 0.1em 0.1em black;
+  transform: translate(0.2em, 0.2em);
+}
+
+/*** UTILITY ***/
+.centre {
+  text-align: center;
+}
+.block {
+  display: block;
+}
+img .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img .box {
+  display: block;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  padding: 1em;
+}
+
+/*** BLOCK COPY ***/
+pre code {
+  position: relative;
+}
+pre code .copy-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  content: "";
+}
+pre.jda-selected {
+  border: 2px solid red;
+}
+pre.jda-copied {
+  border: 2px solid #7F7;
+}
+
+/*** UPLOAD RESULT ***/
+div.upload-result {
+  background-color: yellow;
+  color: black;
+}
+div.upload-result h1 {
+  color: purple;
+}
+div.upload-result .upload-result-message {
+  color: #070;
+}
+div.upload-result div.upload-result-files {
+  border: 2px solid orange;
+}
+div.upload-result div.upload-result-file {
+  border: 2px solid blue;
+}
+div.upload-result div.upload-result-file img {
+  margin-left: 1em;
+  height: 3em;
+  max-width: 4em;
+}
+
+/*** block specials ***/
+div.poem {
+  font-family: "Adobe Caslon Pro", serif;
+  padding: 0.5em 1em;
+  margin: 1em;
+  margin-bottom: 1.5em;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: #ddd;
+  box-shadow: 0.5em 0.5em 0.5em black;
+}
+div.poem p {
+  white-space: pre;
+}
+
+div.poem div.meta {
+  font-family: sans-serif;
+}
+div.poem div.meta-item span.key {
+  color: #555;
+}
+div.poem div.meta-item span.value {
+  font-style: italic;
+}
+/*** for highlighting matching paras ***/
+.matching {
+  background-color: #007 !important;
+  color: white !important;
+}

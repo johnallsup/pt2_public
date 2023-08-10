@@ -1,0 +1,72 @@
+table {
+  border: 1px solid black;
+}
+table tr:nth-child(even) {
+  background-color: #ddd;
+}
+table tr {
+  padding: 0.2em;
+}
+a,a:visited {
+  color: #007;
+  text-decoration: none;
+}
+table.keyboard-shortcuts {
+  padding: 0.3rem;
+}
+table.keyboard-shortcuts td.comment {
+  font-style: italic;
+}
+table.keyboard-shortcuts td.combo {
+  font-family: monospace;
+  min-width: 5em;
+}
+table.keyboard-shortcuts td.description {
+}
+div.langue1 {
+}
+div.langue1 table.langue1-table {
+  margin: 1rem 0;
+  border: 1px solid black;
+  padding: 0rem;
+  background-color: #ddd;
+  border: 1px solid black; 
+  width: 100%;
+  box-shadow: 0.3rem 0.3rem 0.4rem black;
+}
+div.langue1 table.langue1-table td.heading {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+div.langue1 table.langue1-table td {
+  min-width: 30%;
+  padding-left: 0.5rem;
+}
+div.langue1 table.langue1-table tr:nth-child(even) {
+  background-color: #ccc;
+}
+div.duolingo-sentences {
+  margin: 1em 0;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  background-color: #dde;
+  padding: 1rem;
+}
+div.duolingo-sentences p.duolingo-comment {
+  margin: 0px;
+  font-style: italic;
+}
+div.duolingo-sentences span.source-lang,
+div.duolingo-sentences span.target-lang {
+  font-size: 0.7em;
+  color: #555;
+}
+div.duolingo-sentences div.duolingo-sentence {
+  margin: 1rem 0;
+}
+
+pre[select-status="selected"] {
+  border: 2px solid red;
+}
+pre[select-status="copied"] {
+  border: 2px solid green;
+}

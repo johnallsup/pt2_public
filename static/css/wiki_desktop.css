@@ -1,0 +1,163 @@
+/*** TOPLEVEL ***/
+html {
+}
+
+body {
+}
+
+body.auth {
+}
+
+/*** DRAGON DROP ***/
+body.dragon div.container {
+  border: 5px dashed gray;
+}
+
+/*** CONTAINER ***/
+div.container {
+  position: relative;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  height: 98%;
+  width: 100%;
+  max-width: 60rem; 
+}
+body.full-width div.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  max-width: none;
+  height: 100vh;
+}
+body.full-width {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+header h1 span.homesuffix {
+  font-size: 0.7em;
+  color: gray;
+}
+.action {
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.action:hover {
+  background-color: #070;
+  border: 1px solid black;
+}
+
+/** TAGS **/
+header div.tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header div.tags ul li a {
+  display: inline-block;
+  padding: 0.3em;
+}
+header div.tags ul li {
+  display: inline-block;
+  border: 1px solid black;
+  box-shadow: 0.3em 0.3em 0.3em black;
+  margin: 0.3em;
+}
+
+/** TODO: Media Print **/
+/* Hide options and stuff */
+/* Show full date/time of modification */
+/* Show breadcrumbs on same line as mtime */
+/* Header has 1px solid bottom border */
+/* Hide navbar */
+/* Show only title */
+
+/** NAVBAR **/
+
+/*** CONTENT ***/
+section.main {
+  background-color: white;
+}
+
+/*** CODE BLOCKS ***/
+/*** Add block handers to generate these ***/
+pre.prose {
+  font-family: inherit;
+}
+pre.prose.indent {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+pre.prose.pagify {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+pre.pagify {
+  margin: 1em;
+  border: 1px solid black;
+  padding: 1em;
+  background-color: white;
+  box-shadow: 0.5em 0.5em 0.5em black;
+}
+
+pre:has(code) {
+  font-family: monospace;
+  color: red;
+  padding: 1em;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+  background: #2b2b2b;
+  color: #f8f8f2;
+  overflow-x: auto;
+}
+pre > code.language-prose {
+  font-family: serif;
+}
+pre > code {
+  padding: 0px;
+  white-space: pre-wrap;
+  background-color: transparent;
+}
+code {
+  padding: 0.1em;
+  background-color: hsla(0,0%,90%,50%);
+}
+
+
+
+
+/*** BLOCK COPY ***/
+pre code {
+  position: relative;
+}
+pre code .copy-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  content: "";
+}
+pre.jda-selected {
+  border: 2px solid red;
+}
+pre.jda-copied {
+  border: 2px solid #7F7;
+}
+
+/*** FOR NARROW WINDOWS ***/
+@media( max-width: 1024px ) {
+  /* Don't have page box -- take up entire window */
+  div.container {
+    width: 100vw;
+    border: none;
+    box-shadow: none;
+    margin: 0px;
+    padding: 0px;
+  }
+}

@@ -1,0 +1,48 @@
+RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+RewriteBase /
+
+# invalid dir
+#RewriteRule /home/ .php/error_home.php [L]
+
+# root dir
+RewriteRule "^$" ".php/Root.php" [END]
+
+# api
+RewriteRule "^\.api(/.*)?$" ".php/Api.php" [END]
+
+# special
+RewriteRule ^\.(.*)$ ".php/RootSpecial.php" [END]
+
+# invalid dir component
+# dir components [a-zA-Z0-9_+%@-]+
+# page name components [a-zA-Z0-9_+%@-]+
+# file name components [a-zA-Z0-9_+%@-]+\.[a-zA-Z0-9_+%@-]+
+
+# search word
+RewriteRule "^s(/.*)*$" ".php/SearchWord.php" [END]
+
+# search tag
+RewriteRule "^t(/.*)*$" ".php/SearchTag.php" [END]
+
+# Static files (js and css)
+RewriteRule "^(js|css)/([a-zA-Z0-9_+@=-]+/+)*[a-zA-Z0-9_+%@=-]+\.[a-zA-Z0-9_+%@=\.-]*[a-zA-Z0-9_+%@=-]$" .php/StaticFile.php [END]
+
+# valid file
+RewriteRule "^([a-zA-Z0-9_+@=-]+/+)*[a-zA-Z0-9_+%@=-]+\.[a-zA-Z0-9_+%@=\.-]*[a-zA-Z0-9_+%@=-]$" .php/File.php [END]
+
+# valid page
+RewriteRule "^([a-zA-Z0-9_+@=-]+/+)*[a-zA-Z0-9_+%@=-]+/?$" .php/Page.php [END]
+
+# common specials
+#RewriteRule "^([a-zA-Z0-9_+@=-]+/+)*\.s$" .php/SubdirSearch.php [END]
+#RewriteRule "^([a-zA-Z0-9_+@=-]+/+)*\.w$" .php/SubdirWordSearch.php [END]
+#RewriteRule "^([a-zA-Z0-9_+@=-]+/+)*\.wc$" .php/SubdirWordSearchCS.php [END]
+#RewriteRule "^([a-zA-Z0-9_+@=-]+/+)*\.t$" .php/SubdirTagSearch.php [END]
+# valid special default
+RewriteRule "^([a-zA-Z0-9_+@=-]+/+)*\.[a-zA-Z0-9_+%@=-]+(/.*)?$" .php/Special.php [END]
+
+# other
+RewriteRule . .php/NotMatch.php [END]
